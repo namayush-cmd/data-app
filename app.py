@@ -48,3 +48,9 @@ def submit():
             df.to_excel(writer, index=False, header=False, startrow=start_row)
 
     return "Data Saved Successfully!"
+@app.route('/health')
+def health():
+    return "OK", 200
+
+if __name__ == '__main__':
+    app.run(debug=True)
