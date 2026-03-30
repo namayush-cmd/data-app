@@ -189,60 +189,60 @@ def form():
 <td>4</td>
 <td>Quality Control of ASU & H Drugs</td>
 
-<td><input name="c21" type="number"></td>
-<td><input name="c22" type="number"></td>
-<td><input name="c23" type="number"></td>
-<td><input name="c24" type="number"></td>
+<td><input name="c31" type="number"></td>
+<td><input name="c32" type="number"></td>
+<td><input name="c33" type="number"></td>
+<td><input name="c34" type="number"></td>
 
-<td><input name="c25" type="number"></td>
-<td><input name="c26" type="number"></td>
-<td><input name="c27" type="number"></td>
-<td><input name="c28" type="number"></td>
+<td><input name="c35" type="number"></td>
+<td><input name="c36" type="number"></td>
+<td><input name="c37" type="number"></td>
+<td><input name="c38" type="number"></td>
 
-<td><input name="c29" type="number"></td>
-<td><input name="c30" type="number"></td>
+<td><input name="c39" type="number"></td>
+<td><input name="c40" type="number"></td>
 
-<td><input name="r3" type="text"></td>
+<td><input name="r4" type="text"></td>
 </tr>
 <!-- ROW 5 -->
 <tr>
 <td>5</td>
 <td>Flexi Pool</td>
 
-<td><input name="c21" type="number"></td>
-<td><input name="c22" type="number"></td>
-<td><input name="c23" type="number"></td>
-<td><input name="c24" type="number"></td>
+<td><input name="c41" type="number"></td>
+<td><input name="c42" type="number"></td>
+<td><input name="c43" type="number"></td>
+<td><input name="c44" type="number"></td>
 
-<td><input name="c25" type="number"></td>
-<td><input name="c26" type="number"></td>
-<td><input name="c27" type="number"></td>
-<td><input name="c28" type="number"></td>
+<td><input name="c45" type="number"></td>
+<td><input name="c46" type="number"></td>
+<td><input name="c47" type="number"></td>
+<td><input name="c48" type="number"></td>
 
-<td><input name="c29" type="number"></td>
-<td><input name="c30" type="number"></td>
+<td><input name="c49" type="number"></td>
+<td><input name="c50" type="number"></td>
 
-<td><input name="r3" type="text"></td>
+<td><input name="r5" type="text"></td>
 </tr>
 <!-- ROW 6 -->
 <tr>
 <td>6</td>
 <td>Admin Cost</td>
 
-<td><input name="c21" type="number"></td>
-<td><input name="c22" type="number"></td>
-<td><input name="c23" type="number"></td>
-<td><input name="c24" type="number"></td>
+<td><input name="c51" type="number"></td>
+<td><input name="c52" type="number"></td>
+<td><input name="c53" type="number"></td>
+<td><input name="c54" type="number"></td>
 
-<td><input name="c25" type="number"></td>
-<td><input name="c26" type="number"></td>
-<td><input name="c27" type="number"></td>
-<td><input name="c28" type="number"></td>
+<td><input name="c55" type="number"></td>
+<td><input name="c56" type="number"></td>
+<td><input name="c57" type="number"></td>
+<td><input name="c58" type="number"></td>
 
-<td><input name="c29" type="number"></td>
-<td><input name="c30" type="number"></td>
+<td><input name="c59" type="number"></td>
+<td><input name="c60" type="number"></td>
 
-<td><input name="r3" type="text"></td>
+<td><input name="r6" type="text"></td>
 </tr>
 <tr>
 <td colspan="2"><b>Total</b></td>
@@ -357,16 +357,7 @@ def form():
 # ================= SAVE =================
 @app.route('/submit', methods=['POST'])
 def submit():
-    data = [
-        request.form.get('state'),
-        request.form.get('year'),
-        request.form.get('component'),
-        request.form.get('rec_central'),
-        request.form.get('rec_state'),
-        request.form.get('nonrec_central'),
-        request.form.get('nonrec_state'),
-        request.form.get('remarks')
-    ]
+data = list(request.form.values())
 
     sheet.append_row(data)
 
