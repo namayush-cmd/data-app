@@ -25,18 +25,326 @@ sheet = client.open_by_key(SHEET_ID).sheet1
 @app.route('/')
 def form():
     return '''
-    <h2>Data Entry Form</h2>
+    <h3>Status of Utilization of Grants during the 15th and 16th Finance Commission Cycles</h3>
     <form method="POST" action="/submit">
-        State/UT: <input type="text" name="state"><br><br>
-        Year: <input type="text" name="year"><br><br>
-        Component: <input type="text" name="component"><br><br>
 
-        Recurring (Central): <input type="number" name="rec_central"><br><br>
-        Recurring (State): <input type="number" name="rec_state"><br><br>
-        Non-Recurring (Central): <input type="number" name="nonrec_central"><br><br>
-        Non-Recurring (State): <input type="number" name="nonrec_state"><br><br>
+        State/UT:
+        <select name="state">
 
-        Remarks: <input type="text" name="remarks"><br><br>
+            <option value="">--Select State--</option>
+
+            <option>Andhra Pradesh</option>
+            <option>Arunachal Pradesh</option>
+            <option>Assam</option>
+            <option>Bihar</option>
+            <option>Chhattisgarh</option>
+            <option>Goa</option>
+            <option>Gujarat</option>
+            <option>Haryana</option>
+            <option>Himachal Pradesh</option>
+            <option>Jharkhand</option>
+            <option>Karnataka</option>
+            <option>Kerala</option>
+            <option>Madhya Pradesh</option>
+            <option>Maharashtra</option>
+            <option>Manipur</option>
+            <option>Meghalaya</option>
+            <option>Mizoram</option>
+            <option>Nagaland</option>
+            <option>Odisha</option>
+            <option>Punjab</option>
+            <option>Rajasthan</option>
+            <option>Sikkim</option>
+            <option>Tamil Nadu</option>
+            <option>Telangana</option>
+            <option>Tripura</option>
+            <option>Uttar Pradesh</option>
+            <option>Uttarakhand</option>
+            <option>West Bengal</option>
+
+            <option>Andaman & Nicobar Islands</option>
+            <option>Chandigarh</option>
+            <option>Dadra & Nagar Haveli and Daman & Diu</option>
+            <option>Delhi</option>
+            <option>Jammu & Kashmir</option>
+            <option>Ladakh</option>
+            <option>Lakshadweep</option>
+            <option>Puducherry</option>
+
+        </select>
+        <br><br>
+
+        Year:
+        <select name="year">
+            <option value="">--Select Year--</option>
+            <option>2020-21</option>
+            <option>2021-22</option>
+            <option>2022-23</option>
+            <option>2023-24</option>
+            <option>2024-25</option>
+            <option>2025-26</option>
+            <option>2026-27</option>
+        </select>
+        <br><br>
+
+<h3>Component wise Utilization Details</h3>
+
+<table border="1" cellpadding="6">
+
+<tr>
+    <th rowspan="3">S. No.</th>
+    <th rowspan="3">Component</th>
+    <th colspan="4">Central Share</th>
+    <th colspan="4">State Share</th>
+    <th colspan="2">Total</th>
+    <th rowspan="3">Remarks</th>
+</tr>
+
+<tr>
+    <th colspan="2">Utilization</th>
+    <th colspan="2">Refund</th>
+    <th colspan="2">Utilization</th>
+    <th colspan="2">Refund</th>
+    <th rowspan="2">Utilization</th>
+    <th rowspan="2">Refund</th>
+</tr>
+
+<tr>
+    <th>Recurring</th>
+    <th>Non-Recurring</th>
+    <th>Recurring</th>
+    <th>Non-Recurring</th>
+
+    <th>Recurring</th>
+    <th>Non-Recurring</th>
+    <th>Recurring</th>
+    <th>Non-Recurring</th>
+</tr>
+
+<!-- ROW 1 -->
+<tr>
+<td>1</td>
+<td>Ayush Services</td>
+
+<td><input name="c1" type="number"></td>
+<td><input name="c2" type="number"></td>
+<td><input name="c3" type="number"></td>
+<td><input name="c4" type="number"></td>
+
+<td><input name="c5" type="number"></td>
+<td><input name="c6" type="number"></td>
+<td><input name="c7" type="number"></td>
+<td><input name="c8" type="number"></td>
+
+<td><input name="c9" type="number"></td>
+<td><input name="c10" type="number"></td>
+
+<td><input name="r1" type="text"></td>
+</tr>
+
+<!-- ROW 2 -->
+<tr>
+<td>2</td>
+<td>Ayush Educational Institutions</td>
+
+<td><input name="c11" type="number"></td>
+<td><input name="c12" type="number"></td>
+<td><input name="c13" type="number"></td>
+<td><input name="c14" type="number"></td>
+
+<td><input name="c15" type="number"></td>
+<td><input name="c16" type="number"></td>
+<td><input name="c17" type="number"></td>
+<td><input name="c18" type="number"></td>
+
+<td><input name="c19" type="number"></td>
+<td><input name="c20" type="number"></td>
+
+<td><input name="r2" type="text"></td>
+</tr>
+
+<!-- ROW 3 -->
+<tr>
+<td>3</td>
+<td>Medicinal Plants</td>
+
+<td><input name="c21" type="number"></td>
+<td><input name="c22" type="number"></td>
+<td><input name="c23" type="number"></td>
+<td><input name="c24" type="number"></td>
+
+<td><input name="c25" type="number"></td>
+<td><input name="c26" type="number"></td>
+<td><input name="c27" type="number"></td>
+<td><input name="c28" type="number"></td>
+
+<td><input name="c29" type="number"></td>
+<td><input name="c30" type="number"></td>
+
+<td><input name="r3" type="text"></td>
+</tr>
+
+<!-- ROW 4 -->
+<tr>
+<td>3</td>
+<td>Quality Control of ASU & H Drugs</td>
+
+<td><input name="c21" type="number"></td>
+<td><input name="c22" type="number"></td>
+<td><input name="c23" type="number"></td>
+<td><input name="c24" type="number"></td>
+
+<td><input name="c25" type="number"></td>
+<td><input name="c26" type="number"></td>
+<td><input name="c27" type="number"></td>
+<td><input name="c28" type="number"></td>
+
+<td><input name="c29" type="number"></td>
+<td><input name="c30" type="number"></td>
+
+<td><input name="r3" type="text"></td>
+</tr>
+<!-- ROW 5 -->
+<tr>
+<td>3</td>
+<td>Flexi Pool</td>
+
+<td><input name="c21" type="number"></td>
+<td><input name="c22" type="number"></td>
+<td><input name="c23" type="number"></td>
+<td><input name="c24" type="number"></td>
+
+<td><input name="c25" type="number"></td>
+<td><input name="c26" type="number"></td>
+<td><input name="c27" type="number"></td>
+<td><input name="c28" type="number"></td>
+
+<td><input name="c29" type="number"></td>
+<td><input name="c30" type="number"></td>
+
+<td><input name="r3" type="text"></td>
+</tr>
+<!-- ROW 6 -->
+<tr>
+<td>3</td>
+<td>Admin Cost</td>
+
+<td><input name="c21" type="number"></td>
+<td><input name="c22" type="number"></td>
+<td><input name="c23" type="number"></td>
+<td><input name="c24" type="number"></td>
+
+<td><input name="c25" type="number"></td>
+<td><input name="c26" type="number"></td>
+<td><input name="c27" type="number"></td>
+<td><input name="c28" type="number"></td>
+
+<td><input name="c29" type="number"></td>
+<td><input name="c30" type="number"></td>
+
+<td><input name="r3" type="text"></td>
+</tr>
+<tr>
+<td colspan="2"><b>Total</b></td>
+<td colspan="11"></td>
+</tr>
+
+</table>
+
+        <br><br>
+
+        Special Remarks:
+        <input type="text" name="remarks">
+
+        <br><br>
+<br><br>
+
+<h3>Budget head wise Comparison of Utilization Grant</h3>
+<h4 style="text-align:right;">Rs. in Lakhs</h4>
+
+<table border="1" cellpadding="6">
+
+<tr>
+    <th rowspan="2">S. No.</th>
+    <th rowspan="2">Budget Head</th>
+
+    <th colspan="3">Central Share</th>
+    <th colspan="3">State Share</th>
+    <th colspan="3">Total</th>
+
+    <th rowspan="2">Remaining Unutilized Grant</th>
+    <th rowspan="2">Remarks</th>
+</tr>
+
+<tr>
+    <th>Released</th>
+    <th>Utilization</th>
+    <th>Refund</th>
+
+    <th>Released</th>
+    <th>Utilization</th>
+    <th>Refund</th>
+
+    <th>Released</th>
+    <th>Utilization</th>
+    <th>Refund</th>
+</tr>
+
+<!-- ROW 1 -->
+<tr>
+<td>1</td>
+<td>Recurring</td>
+
+<td><input name="b1" type="number"></td>
+<td><input name="b2" type="number"></td>
+<td><input name="b3" type="number"></td>
+
+<td><input name="b4" type="number"></td>
+<td><input name="b5" type="number"></td>
+<td><input name="b6" type="number"></td>
+
+<td><input name="b7" type="number"></td>
+<td><input name="b8" type="number"></td>
+<td><input name="b9" type="number"></td>
+
+<td><input name="b10" type="number"></td>
+<td><input name="b11" type="text"></td>
+</tr>
+
+<!-- ROW 2 -->
+<tr>
+<td>2</td>
+<td>Non-Recurring</td>
+
+<td><input name="b12" type="number"></td>
+<td><input name="b13" type="number"></td>
+<td><input name="b14" type="number"></td>
+
+<td><input name="b15" type="number"></td>
+<td><input name="b16" type="number"></td>
+<td><input name="b17" type="number"></td>
+
+<td><input name="b18" type="number"></td>
+<td><input name="b19" type="number"></td>
+<td><input name="b20" type="number"></td>
+
+<td><input name="b21" type="number"></td>
+<td><input name="b22" type="text"></td>
+</tr>
+
+<!-- TOTAL -->
+<tr>
+<td colspan="2"><b>Total</b></td>
+<td colspan="11"></td>
+</tr>
+
+</table>
+
+<br>
+
+<p>
+• This represents the total grant released during the year, for which States/UTs are required to report the actual utilization. The utilization will be mapped against the approved components, and any unutilized grant should also be reported.
+</p>
 
         <input type="submit" value="Submit">
     </form>
