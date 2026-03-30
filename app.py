@@ -186,7 +186,7 @@ def form():
 
 <!-- ROW 4 -->
 <tr>
-<td>3</td>
+<td>4</td>
 <td>Quality Control of ASU & H Drugs</td>
 
 <td><input name="c21" type="number"></td>
@@ -206,7 +206,7 @@ def form():
 </tr>
 <!-- ROW 5 -->
 <tr>
-<td>3</td>
+<td>5</td>
 <td>Flexi Pool</td>
 
 <td><input name="c21" type="number"></td>
@@ -226,7 +226,7 @@ def form():
 </tr>
 <!-- ROW 6 -->
 <tr>
-<td>3</td>
+<td>6</td>
 <td>Admin Cost</td>
 
 <td><input name="c21" type="number"></td>
