@@ -357,7 +357,7 @@ def form():
 # ================= SAVE =================
 @app.route('/submit', methods=['POST'])
 def submit():
-data = list(request.form.values())
+    data = list(request.form.values())
 
     sheet.append_row(data)
 
@@ -365,8 +365,6 @@ data = list(request.form.values())
     <h3>✅ Data Saved Successfully!</h3>
     <a href="/">⬅ Back</a>
     '''
-
-
 # ================= HEALTH =================
 @app.route('/health')
 def health():
@@ -384,12 +382,7 @@ def final_report():
         return "No data found!"
 
     # Rename columns (IMPORTANT)
-    df.columns = [
-        'State', 'Year', 'Component',
-        'Rec_Central', 'Rec_State',
-        'NonRec_Central', 'NonRec_State',
-        'Remarks'
-    ]
+    # df.columns = [...]
 
     # Convert numbers
     cols = ['Rec_Central', 'Rec_State', 'NonRec_Central', 'NonRec_State']
@@ -433,4 +426,4 @@ def final_report():
 
 # ================= RUN =================
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
